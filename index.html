@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+  </head>
+  <body class="light-theme">
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Preloader -->
+
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="loading">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" asscroll-container>
+      <div class="toggle-bar">
+        <div class="sun-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 15q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Zm0 2q-2.075 0-3.537-1.463Q7 14.075 7 12t1.463-3.538Q9.925 7 12 7t3.538 1.462Q17 9.925 17 12q0 2.075-1.462 3.537Q14.075 17 12 17ZM2 13q-.425 0-.712-.288Q1 12.425 1 12t.288-.713Q1.575 11 2 11h2q.425 0 .713.287Q5 11.575 5 12t-.287.712Q4.425 13 4 13Zm18 0q-.425 0-.712-.288Q19 12.425 19 12t.288-.713Q19.575 11 20 11h2q.425 0 .712.287.288.288.288.713t-.288.712Q22.425 13 22 13Zm-8-8q-.425 0-.712-.288Q11 4.425 11 4V2q0-.425.288-.713Q11.575 1 12 1t.713.287Q13 1.575 13 2v2q0 .425-.287.712Q12.425 5 12 5Zm0 18q-.425 0-.712-.288Q11 22.425 11 22v-2q0-.425.288-.712Q11.575 19 12 19t.713.288Q13 19.575 13 20v2q0 .425-.287.712Q12.425 23 12 23ZM5.65 7.05 4.575 6q-.3-.275-.288-.7.013-.425.288-.725.3-.3.725-.3t.7.3L7.05 5.65q.275.3.275.7 0 .4-.275.7-.275.3-.687.287-.413-.012-.713-.287ZM18 19.425l-1.05-1.075q-.275-.3-.275-.712 0-.413.275-.688.275-.3.688-.287.412.012.712.287L19.425 18q.3.275.288.7-.013.425-.288.725-.3.3-.725.3t-.7-.3ZM16.95 7.05q-.3-.275-.287-.688.012-.412.287-.712L18 4.575q.275-.3.7-.288.425.013.725.288.3.3.3.725t-.3.7L18.35 7.05q-.3.275-.7.275-.4 0-.7-.275ZM4.575 19.425q-.3-.3-.3-.725t.3-.7l1.075-1.05q.3-.275.713-.275.412 0 .687.275.3.275.288.688-.013.412-.288.712L6 19.425q-.275.3-.7.287-.425-.012-.725-.287ZM12 12Z"
+            />
+          </svg>
+        </div>
+        <button class="toggle-button">
+          <div class="toggle-circle"></div>
+        </button>
+        <div class="moon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 21q-3.75 0-6.375-2.625T3 12q0-3.75 2.625-6.375T12 3q.35 0 .688.025.337.025.662.075-1.025.725-1.637 1.887Q11.1 6.15 11.1 7.5q0 2.25 1.575 3.825Q14.25 12.9 16.5 12.9q1.375 0 2.525-.613 1.15-.612 1.875-1.637.05.325.075.662Q21 11.65 21 12q0 3.75-2.625 6.375T12 21Zm0-2q2.2 0 3.95-1.212 1.75-1.213 2.55-3.163-.5.125-1 .2-.5.075-1 .075-3.075 0-5.238-2.162Q9.1 10.575 9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.162 2.55Q5 9.8 5 12q0 2.9 2.05 4.95Q9.1 19 12 19Zm-.25-6.75Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="page-wrapper" asscroll>
+        <section class="hero">
+          <div class="hero-wrapper">
+            <!-- Intro -->
+
+            <div class="intro-text">Welcome to my portfolio!</div>
+            <div class="arrow-svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                <path
+                  fill="currentColor"
+                  d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"
+                />
+              </svg>
+            </div>
+
+            <div class="hero-main">
+              <h1 class="hero-main-title">Edward Tunkl</h1>
+              <p class="hero-main-description">Junior Full-Stack Developer</p>
+            </div>
+
+            <div class="hero-second">
+              <p class="hero-second-subheading first-sub">Edward Tunkl</p>
+              <p class="hero-second-subheading second-sub">Portfolio</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">About Me</span>
+
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+            <span class="section-number">01</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <!-- <h3 class="section-heading">Hello!</h3> -->
+            <img class="image" src="./Experience/Utils/image0.jpeg" alt="image" />
+            <br class="section-text">
+              Hi there 👋! I'm Edward - a Berlin based Junior Full-Stack Developer with a focus on Frontend and
+              3D-Design. </br> </br> When I'm not coding, I am either learning new riffs on the electric guitar or out and about on
+              my race bike.
+            </p>
+            <p class="section-text">Welcome to my portfolio!</p>
+            <!-- <p class="section-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              ducimus nihil porro tenetur. Impedit amet, iste reiciendis
+              eligendi eius cum porro nostrum! Repellendus ducimus, fugiat magni
+              perferendis possimus natus error.
+            </p> -->
+          </div>
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">My Work</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">02</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">CityBox</h3>
+            <p class="section-text">
+              This is my final project of the Full-Stack Course at StriveSchool. As I am a big fan of the sharing
+              movement, I created a platform for sharing daily tools to save space and stop waste.
+            </p>
+            <h3 class="section-heading">PuzzleCam</h3>
+            <p class="section-text">
+              This puzzle game is using a live webcam video to create a unique and moving puzzle of yourself.
+            </p>
+            <h3 class="section-heading">2D-Game</h3>
+            <p class="section-text">A classical jump and run game in the style of Maaaariooooo! :)</p>
+            <h3 class="section-heading">
+              For more projects visit my GitHub profile:
+              <br>
+              <a href="https://github.com/edwardTunkl">github.com/edwardtunkl</a>
+            </h3>
+          </div>
+        </section>
+
+        <div class="third-move section-margin"></div>
+
+        <section class="third-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar green-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper green-text green-border">
+            <h1 class="section-title green-text green-border">
+              <span class="section-title-text green-text">Contact Me</span>
+
+              <div class="section-title-decoration styleOne green-border"></div>
+              <div class="section-title-decoration styleTwo green-border"></div>
+              <div class="section-title-decoration styleThree green-background green-border"></div>
+            </h1>
+            <span class="section-number green-text">03</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Please feel free to contact me for further information.</h3>
+      
+
+            <h3 class="section-heading">E-mail:</h3>
+            <p class="section-text">edwardtunkl@gmail.com</p>
+            <h3 class="section-heading">LinkedIn:</h3>
+            <br>
+            <a href="www.linkedin.com/in/edward-tunkl">linkedin.com/edwardTunkl</a>
+          <br><br><br>
+          <p class="section-text">Credits to <span class="credits">bokoku33</span> for originality and design of this page!</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
