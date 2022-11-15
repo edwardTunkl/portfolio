@@ -1,4 +1,3 @@
-import * as THREE from 'three';
 import Experience from '../Experience.js';
 import GSAP from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
@@ -128,7 +127,7 @@ export default class Controls {
                 return 1;
               },
               z: () => {
-                return this.sizes.height * 0.0032;
+                return this.sizes.height * 0.004;
               },
             },
             'same'
@@ -161,8 +160,8 @@ export default class Controls {
             invalidateOnRefresh: true,
           },
         }).to(this.camera.orthographicCamera.position, {
-          x: -4.1,
-          y: -2,
+          x: -3.1,
+          y: 2,
         });
       },
 
@@ -371,8 +370,8 @@ export default class Controls {
         this.room.children.forEach((child) => {
           if (child.name === 'Mini_Floor') {
             this.first = GSAP.to(child.position, {
-              x: 1.4,
-              z: -2.4,
+              x: -7.92,
+              z: 13.7,
               duration: 0.3,
             });
           }
@@ -394,7 +393,7 @@ export default class Controls {
               duration: 0.3,
             });
           }
-          if (child.name === 'Dirt') {
+          if (child.name === 'Grass') {
             this.fourth = GSAP.to(child.scale, {
               x: 1,
               y: 1,
@@ -403,35 +402,17 @@ export default class Controls {
               duration: 0.3,
             });
           }
-          if (child.name === 'FlowerOne') {
-            this.sixth = GSAP.to(child.scale, {
+          if (child.name === 'Tree') {
+            this.fifth = GSAP.to(child.scale, {
               x: 1,
               y: 1,
               z: 1,
               ease: 'back.out(2)',
-              duration: 0.3,
-            });
-          }
-          if (child.name === 'FlowerTwo') {
-            this.seventh = GSAP.to(child.scale, {
-              x: 1,
-              y: 1,
-              z: 1,
-              ease: 'back.out(2)',
-              duration: 0.3,
-            });
-          }
-          if (child.name === 'FlowerThree') {
-            this.eighth = GSAP.to(child.scale, {
-              x: 1,
-              y: 1,
-              z: 1,
-              ease: 'back.out(2)',
-              duration: 0.3,
+              duration: 0.5,
             });
           }
           if (child.name === 'Mailbox') {
-            this.nineth = GSAP.to(child.scale, {
+            this.sixth = GSAP.to(child.scale, {
               x: 1,
               y: 1,
               z: 1,
@@ -444,10 +425,8 @@ export default class Controls {
         this.secondPartTimeline.add(this.second);
         this.secondPartTimeline.add(this.third);
         this.secondPartTimeline.add(this.fourth, '-=0.2');
+        this.secondPartTimeline.add(this.fifth, '-=0.2');
         this.secondPartTimeline.add(this.sixth, '-=0.2');
-        this.secondPartTimeline.add(this.seventh, '-=0.2');
-        this.secondPartTimeline.add(this.eighth, '-=0.2');
-        this.secondPartTimeline.add(this.nineth, '-=0.1');
       },
     });
   }
@@ -456,75 +435,3 @@ export default class Controls {
 
   update() {}
 }
-
-//this.progress = 0;
-//this.dummyCurve = new THREE.Vector3(0, 0, 0);
-
-/* this.lerp = {
-      current: 0,
-      target: 0,
-      ease: 0.1,
-    };
-    
-    this.position = new THREE.Vector3(0, 0, 0);
-    this.lookAtPosition = new THREE.Vector3(0, 0, 0);
-
-    this.directionalVector = new THREE.Vector3(0, 0, 0);
-    this.staticVector = new THREE.Vector3(0, 1, 0);
-    this.crossVector = new THREE.Vector3(0, 0, 0);
-
-    this.setPath();
-    this.onWheel();
-  }
-
-  setPath() {
-    this.curve = new THREE.CatmullRomCurve3(
-      [
-        new THREE.Vector3(-5, 0, 0),
-        new THREE.Vector3(0, 0, -5),
-        new THREE.Vector3(5, 0, 0),
-        new THREE.Vector3(0, 0, 5),
-      ],
-      true
-    );
-
-    const points = this.curve.getPoints(50);
-    const geometry = new THREE.BufferGeometry().setFromPoints(points);
-
-    const material = new THREE.LineBasicMaterial({ color: 0xff0000 });
-
-    // Create the final object to add to the scene
-    const curveObject = new THREE.Line(geometry, material);
-    this.scene.add(curveObject);
-  }
-
-  onWheel() {
-    window.addEventListener('wheel', (e) => {
-      //console.log(e);
-      if (e.deltaY > 0) {
-        this.lerp.target += 0.01;
-      } else {
-        this.lerp.target -= 0.01;
-      }
-    });
-
-    update(){
-
-    this.lerp.current = GSAP.utils.interpolate(
-      this.lerp.current,
-      this.lerp.target,
-      this.lerp.ease
-    );
-    this.curve.getPointAt(this.lerp.current % 1, this.position);
-    this.camera.orthographicCamera.position.copy(this.position);
-
-    this.directionalVector.subVectors(
-      this.curve.getPointAt((this.lerp.current % 1) + 0.000001),
-      this.position
-    );
-    this.directionalVector.normalize();
-    this.crossVector.crossVectors(this.directionalVector, this.staticVector);
-    this.crossVector.multiplyScalar(100000);
-    this.camera.orthographicCamera.lookAt(this.crossVector);
-    }
-    */

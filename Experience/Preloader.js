@@ -180,7 +180,7 @@ export default class Preloader extends EventEmitter {
             x: 0,
             y: 0,
             z: 0,
-            duration: 1,
+            duration: 0.8,
           },
           'introText'
         )
@@ -294,6 +294,11 @@ export default class Preloader extends EventEmitter {
           duration: 0.5,
         })
         .set(this.roomChildren.mini_floor.scale, {
+          x: 1,
+          y: 1,
+          z: 1,
+        })
+        .set(this.roomChildren.guitar.scale, {
           x: 1,
           y: 1,
           z: 1,

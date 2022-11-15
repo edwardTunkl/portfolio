@@ -58,24 +58,13 @@ export default class Room {
         child.position.z = -6;
       }
 
-      // if (
-      //   child.name === 'Mailbox' ||
-      //   child.name === 'Lamp' ||
-      //   child.name === 'doormat' ||
-      //   child.name === 'FlowerOne' ||
-      //   child.name === 'FlowerTwo' ||
-      //   child.name === 'FlowerThree' ||
-      //   child.name === 'Dirt'
-      // ) {
-      //   child.scale.set(0, 0, 0);
-      // }
-
       child.scale.set(0, 0, 0);
 
       if (child.name === 'Cube') {
         //child.scale.set(1, 1, 1);
         child.position.set(0, -1.5, 0);
         child.rotation.y = Math.PI / 4;
+        console.log('Cube in Room', child);
       }
 
       this.roomChildren[child.name.toLowerCase()] = child;
@@ -114,12 +103,13 @@ export default class Room {
         ? ((rectLightT.intensity = 40), (rectLight.intensity = 9))
         : ((rectLightT.intensity = 0), (rectLight.intensity = 4));
     });
+    //console.log('ROOM', this.room);
   }
 
   setAnimation() {
     this.mixer = new THREE.AnimationMixer(this.actualRoom);
-    this.room.animations[11].duration = 10;
-    this.swim = this.mixer.clipAction(this.room.animations[11]);
+    this.room.animations[8].duration = 10;
+    this.swim = this.mixer.clipAction(this.room.animations[8]);
     this.swim.play();
   }
 
